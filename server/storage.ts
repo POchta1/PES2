@@ -47,7 +47,9 @@ export class MemStorage implements IStorage {
   async createContactForm(insertForm: InsertContactForm): Promise<ContactForm> {
     const id = this.currentContactFormId++;
     const form: ContactForm = { 
-      ...insertForm, 
+      ...insertForm,
+      email: insertForm.email || null,
+      message: insertForm.message || null,
       id, 
       createdAt: new Date() 
     };

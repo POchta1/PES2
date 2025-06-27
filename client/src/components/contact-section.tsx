@@ -73,12 +73,12 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-20 bg-gradient-to-br from-blue-50 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="font-bold text-4xl text-primary mb-4">Связаться со мной</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Готовы начать путь к успеху? Запишитесь на бесплатный пробный урок или задайте интересующие вопросы
+          <h2 className="font-bold text-4xl lg:text-5xl text-primary mb-6">Связаться со мной</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Готовы начать путь к успеху? Запишитесь на <span className="font-semibold text-primary">бесплатный пробный урок</span> или задайте интересующие вопросы
           </p>
         </div>
         

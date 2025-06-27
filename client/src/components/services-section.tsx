@@ -48,28 +48,28 @@ export default function ServicesSection({ onBookingClick }: ServicesSectionProps
         
         {/* Service Categories */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="text-center">
-            <div className="bg-primary-light w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <i className="fas fa-calculator text-3xl text-primary"></i>
+          <div className="text-center group">
+            <div className="bg-gradient-to-r from-primary to-accent w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <i className="fas fa-calculator text-3xl text-white"></i>
             </div>
-            <h3 className="font-bold text-xl mb-2">Алгебра</h3>
-            <p className="text-gray-600">Уравнения, неравенства, функции</p>
+            <h3 className="font-bold text-xl mb-3 text-gray-800">Алгебра</h3>
+            <p className="text-gray-600 leading-relaxed">Уравнения, неравенства, функции, логарифмы</p>
           </div>
           
-          <div className="text-center">
-            <div className="bg-primary-light w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <i className="fas fa-shapes text-3xl text-primary"></i>
+          <div className="text-center group">
+            <div className="bg-gradient-to-r from-accent to-primary w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <i className="fas fa-shapes text-3xl text-white"></i>
             </div>
-            <h3 className="font-bold text-xl mb-2">Геометрия</h3>
-            <p className="text-gray-600">Планиметрия, стереометрия</p>
+            <h3 className="font-bold text-xl mb-3 text-gray-800">Геометрия</h3>
+            <p className="text-gray-600 leading-relaxed">Планиметрия, стереометрия, векторы</p>
           </div>
           
-          <div className="text-center">
-            <div className="bg-primary-light w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <i className="fas fa-chart-line text-3xl text-primary"></i>
+          <div className="text-center group">
+            <div className="bg-gradient-to-r from-yellow-400 to-orange-500 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <i className="fas fa-chart-line text-3xl text-white"></i>
             </div>
-            <h3 className="font-bold text-xl mb-2">Подготовка к ЕГЭ/ОГЭ</h3>
-            <p className="text-gray-600">Разбор заданий, стратегии решения</p>
+            <h3 className="font-bold text-xl mb-3 text-gray-800">Подготовка к ЕГЭ/ОГЭ</h3>
+            <p className="text-gray-600 leading-relaxed">Разбор заданий, стратегии решения</p>
           </div>
         </div>
             

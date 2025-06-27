@@ -97,33 +97,37 @@ export default function ResultsSection() {
         </div>
         
         {/* Testimonials Slider */}
-        <div className="relative">
+        <div className="relative max-w-4xl mx-auto">
           <h3 className="font-bold text-2xl text-center mb-8">Отзывы учеников и родителей</h3>
           
-          <div className="overflow-hidden">
+          <div className="relative overflow-hidden rounded-2xl">
             <div 
-              className="flex transition-transform duration-500"
+              className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="testimonial-card text-gray-800 mx-4 min-w-full md:min-w-96">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-primary-light rounded-full flex items-center justify-center mr-4">
-                      <i className="fas fa-user text-primary"></i>
+                <div key={index} className="w-full flex-shrink-0 px-4">
+                  <div className="testimonial-card text-gray-800 max-w-2xl mx-auto">
+                    <div className="flex items-center mb-6">
+                      <div className="w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center mr-4 text-white text-2xl">
+                        <i className="fas fa-user"></i>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg">{testimonial.name}</h4>
+                        <p className="text-sm text-gray-600">{testimonial.role}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-bold">{testimonial.name}</h4>
-                      <p className="text-sm text-gray-600">{testimonial.role}</p>
+                    <div className="mb-4">
+                      <div className="flex justify-center text-yellow-400 text-xl">
+                        {[...Array(5)].map((_, i) => (
+                          <i key={i} className="fas fa-star"></i>
+                        ))}
+                      </div>
                     </div>
+                    <blockquote className="text-gray-700 text-center text-lg leading-relaxed italic">
+                      "{testimonial.text}"
+                    </blockquote>
                   </div>
-                  <div className="mb-4">
-                    <div className="flex text-yellow-400">
-                      {[...Array(5)].map((_, i) => (
-                        <i key={i} className="fas fa-star"></i>
-                      ))}
-                    </div>
-                  </div>
-                  <p className="text-gray-700">"{testimonial.text}"</p>
                 </div>
               ))}
             </div>
@@ -132,16 +136,31 @@ export default function ResultsSection() {
           {/* Slider Navigation */}
           <button 
             onClick={previousTestimonial}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 p-3 rounded-full backdrop-blur-sm hover:bg-opacity-30 transition-all"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 p-4 rounded-full backdrop-blur-sm hover:bg-opacity-30 transition-all shadow-lg"
           >
-            <i className="fas fa-chevron-left text-white"></i>
+            <i className="fas fa-chevron-left text-white text-xl"></i>
           </button>
           <button 
             onClick={nextTestimonial}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 p-3 rounded-full backdrop-blur-sm hover:bg-opacity-30 transition-all"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 p-4 rounded-full backdrop-blur-sm hover:bg-opacity-30 transition-all shadow-lg"
           >
-            <i className="fas fa-chevron-right text-white"></i>
+            <i className="fas fa-chevron-right text-white text-xl"></i>
           </button>
+          
+          {/* Dots indicator */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all ${
+                  index === currentSlide 
+                    ? 'bg-white' 
+                    : 'bg-white bg-opacity-50 hover:bg-opacity-75'
+                }`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

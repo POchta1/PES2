@@ -21,14 +21,21 @@ export default function HeroSection({ onBookingClick }: HeroSectionProps) {
     <section id="hero" className="hero-gradient min-h-screen flex items-center relative overflow-hidden">
       {/* Mathematical formulas background */}
       <div className="math-bg">
-        <div className="math-formula">√(x² + y²)</div>
-        <div className="math-formula">∫f(x)dx</div>
-        <div className="math-formula">lim(x→∞)</div>
-        <div className="math-formula">sin²x + cos²x = 1</div>
-        <div className="math-formula">ax² + bx + c = 0</div>
-        <div className="math-formula">π ≈ 3.14159</div>
-        <div className="math-formula">e^(iπ) + 1 = 0</div>
-        <div className="math-formula">∑(n=1 to ∞)</div>
+        <div className="math-formula">x² + y² = z²</div>
+        <div className="math-formula">2 + 2 = 4</div>
+        <div className="math-formula">5 × 3 = 15</div>
+        <div className="math-formula">9 - 4 = 5</div>
+        <div className="math-formula">12 ÷ 3 = 4</div>
+        <div className="math-formula">7 + 8 = 15</div>
+        <div className="math-formula">6 × 7 = 42</div>
+        <div className="math-formula">20 - 8 = 12</div>
+        <div className="math-formula">3 + 5 = 8</div>
+        <div className="math-formula">4 × 4 = 16</div>
+        <div className="math-formula">15 - 9 = 6</div>
+        <div className="math-formula">8 ÷ 2 = 4</div>
+        <div className="math-formula">11 + 3 = 14</div>
+        <div className="math-formula">5 × 6 = 30</div>
+        <div className="math-formula">18 - 7 = 11</div>
       </div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">

@@ -13,23 +13,11 @@ export default function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-              <div className="w-full h-96 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center relative transform hover:scale-105 transition-transform duration-300">
-                <img 
-                  src="https://picsum.photos/600/400?random=1" 
-                  alt="Анна Петрова - репетитор по математике"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                  }}
-                />
-                <div className="text-center text-white relative z-10 bg-black bg-opacity-30 p-8 rounded-lg">
-                  <div className="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i className="fas fa-user text-6xl text-white"></i>
-                  </div>
-                  <h3 className="text-2xl font-bold">Анна Петрова</h3>
-                  <p className="text-blue-100">Репетитор по математике</p>
-                </div>
-              </div>
+              <img 
+                src="https://images.unsplash.com/photo-1494790108755-2616c0763008?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=600" 
+                alt="Анна Петрова - репетитор по математике"
+                className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-300"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
             </div>
             

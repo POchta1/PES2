@@ -15,7 +15,7 @@ export default function HeroSection({ onBookingClick }: HeroSectionProps) {
   }, []);
 
   const successRate = useCounterAnimation(90, 2000, isVisible);
-  const experience = useCounterAnimation(7, 2000, isVisible);
+  const experience = useCounterAnimation(9, 2000, isVisible);
   const students = useCounterAnimation(280, 2000, isVisible);
 
   return (

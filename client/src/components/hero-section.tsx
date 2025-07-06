@@ -36,6 +36,16 @@ export default function HeroSection({ onBookingClick }: HeroSectionProps) {
         <div className="math-formula">11 + 3 = 14</div>
         <div className="math-formula">5 × 6 = 30</div>
         <div className="math-formula">18 - 7 = 11</div>
+        <div className="math-formula">25 - 13 = 12</div>
+        <div className="math-formula">8 × 9 = 72</div>
+        <div className="math-formula">36 ÷ 6 = 6</div>
+        <div className="math-formula">14 + 17 = 31</div>
+        <div className="math-formula">100 - 45 = 55</div>
+        <div className="math-formula">7 × 8 = 56</div>
+        <div className="math-formula">84 ÷ 7 = 12</div>
+        <div className="math-formula">23 + 19 = 42</div>
+        <div className="math-formula">90 - 34 = 56</div>
+        <div className="math-formula">9 × 11 = 99</div>
       </div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">

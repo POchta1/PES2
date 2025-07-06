@@ -205,6 +205,76 @@
     animation-delay: 28s;
   }
 
+  .math-formula:nth-child(16) {
+    top: 65%;
+    left: 65%;
+    font-size: 1.4rem;
+    animation-delay: 30s;
+  }
+
+  .math-formula:nth-child(17) {
+    top: 12%;
+    right: 30%;
+    font-size: 1.6rem;
+    animation-delay: 32s;
+  }
+
+  .math-formula:nth-child(18) {
+    top: 90%;
+    left: 15%;
+    font-size: 1.5rem;
+    animation-delay: 34s;
+  }
+
+  .math-formula:nth-child(19) {
+    top: 8%;
+    left: 75%;
+    font-size: 1.8rem;
+    animation-delay: 36s;
+  }
+
+  .math-formula:nth-child(20) {
+    top: 38%;
+    right: 12%;
+    font-size: 1.7rem;
+    animation-delay: 38s;
+  }
+
+  .math-formula:nth-child(21) {
+    top: 22%;
+    left: 25%;
+    font-size: 1.3rem;
+    animation-delay: 40s;
+  }
+
+  .math-formula:nth-child(22) {
+    top: 82%;
+    right: 40%;
+    font-size: 1.6rem;
+    animation-delay: 42s;
+  }
+
+  .math-formula:nth-child(23) {
+    top: 48%;
+    left: 35%;
+    font-size: 1.5rem;
+    animation-delay: 44s;
+  }
+
+  .math-formula:nth-child(24) {
+    top: 28%;
+    right: 50%;
+    font-size: 1.4rem;
+    animation-delay: 46s;
+  }
+
+  .math-formula:nth-child(25) {
+    top: 78%;
+    left: 75%;
+    font-size: 1.7rem;
+    animation-delay: 48s;
+  }
+
   .btn-primary {
     @apply bg-gradient-to-r from-primary to-accent text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:scale-105;
   }

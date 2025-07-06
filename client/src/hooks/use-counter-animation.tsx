@@ -6,13 +6,13 @@ export function useCounterAnimation(
   shouldStart: boolean = false
 ) {
   const [currentValue, setCurrentValue] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
   const animationRef = useRef<number>();
 
   useEffect(() => {
-    if (!shouldStart || isAnimating) return;
+    if (!shouldStart || hasStarted) return;
 
-    setIsAnimating(true);
+    setHasStarted(true);
     const startTime = Date.now();
     const startValue = 0;
 
@@ -30,7 +30,6 @@ export function useCounterAnimation(
         animationRef.current = requestAnimationFrame(animate);
       } else {
         setCurrentValue(targetValue);
-        setIsAnimating(false);
       }
     };
 
@@ -41,7 +40,19 @@ export function useCounterAnimation(
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [targetValue, duration, shouldStart, isAnimating]);
+  }, [targetValue, duration, shouldStart, hasStarted]);
+
+  // Fallback: if shouldStart is true but animation hasn't started after a delay, show target value
+  useEffect(() => {
+    if (shouldStart && !hasStarted) {
+      const fallbackTimer = setTimeout(() => {
+        setCurrentValue(targetValue);
+        setHasStarted(true);
+      }, 500);
+
+      return () => clearTimeout(fallbackTimer);
+    }
+  }, [shouldStart, hasStarted, targetValue]);
 
   return currentValue;
 }

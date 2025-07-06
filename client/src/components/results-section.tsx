@@ -46,14 +46,14 @@ export default function ResultsSection() {
       observer.observe(sectionRef.current);
     }
 
-    // Also trigger animation after a short delay as fallback
-    const timer = setTimeout(() => {
+    // Immediate fallback to ensure animation starts
+    const immediateTimer = setTimeout(() => {
       setIsVisible(true);
-    }, 1000);
+    }, 500);
 
     return () => {
       observer.disconnect();
-      clearTimeout(timer);
+      clearTimeout(immediateTimer);
     };
   }, []);
 
@@ -90,19 +90,19 @@ export default function ResultsSection() {
         {/* Statistics */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
-            <div className="text-4xl font-bold mb-2">{avgScore}</div>
+            <div className="text-4xl font-bold mb-2">{avgScore || 86}</div>
             <p className="text-blue-200">Средний балл ЕГЭ</p>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold mb-2">{successRate}</div>
+            <div className="text-4xl font-bold mb-2">{successRate || 97}</div>
             <p className="text-blue-200">% поступивших в ВУЗы</p>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold mb-2">{improvement}</div>
+            <div className="text-4xl font-bold mb-2">{improvement || 33}</div>
             <p className="text-blue-200">Улучшение на баллов</p>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold mb-2">{satisfaction}</div>
+            <div className="text-4xl font-bold mb-2">{satisfaction || 100}</div>
             <p className="text-blue-200">% довольных родителей</p>
           </div>
         </div>

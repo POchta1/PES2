@@ -11,7 +11,11 @@ export default function HeroSection({ onBookingClick }: HeroSectionProps) {
 
   useEffect(() => {
     // Start animation immediately since hero is visible on page load
-    setIsVisible(true);
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
   }, []);
 
   const successRate = useCounterAnimation(90, 2000, isVisible);
@@ -61,15 +65,15 @@ export default function HeroSection({ onBookingClick }: HeroSectionProps) {
             
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
               <div className="bg-white bg-opacity-20 rounded-xl p-6 backdrop-blur-sm text-center transform hover:scale-105 transition-transform">
-                <div className="stat-counter text-white text-3xl lg:text-4xl font-bold mb-2">{successRate}%</div>
+                <div className="stat-counter text-white text-3xl lg:text-4xl font-bold mb-2">{successRate || 90}%</div>
                 <p className="text-blue-100 text-sm">успешных учеников</p>
               </div>
               <div className="bg-white bg-opacity-20 rounded-xl p-6 backdrop-blur-sm text-center transform hover:scale-105 transition-transform">
-                <div className="stat-counter text-white text-3xl lg:text-4xl font-bold mb-2">{experience}</div>
+                <div className="stat-counter text-white text-3xl lg:text-4xl font-bold mb-2">{experience || 9}</div>
                 <p className="text-blue-100 text-sm">лет опыта</p>
               </div>
               <div className="bg-white bg-opacity-20 rounded-xl p-6 backdrop-blur-sm text-center transform hover:scale-105 transition-transform">
-                <div className="stat-counter text-white text-3xl lg:text-4xl font-bold mb-2">{students}+</div>
+                <div className="stat-counter text-white text-3xl lg:text-4xl font-bold mb-2">{students || 800}+</div>
                 <p className="text-blue-100 text-sm">довольных учеников</p>
               </div>
             </div>

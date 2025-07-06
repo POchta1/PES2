@@ -6,8 +6,8 @@ export default function ResultsSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
 
-  const avgScore = useCounterAnimation(82, 2000, isVisible);
-  const successRate = useCounterAnimation(94, 2000, isVisible);
+  const avgScore = useCounterAnimation(86, 2000, isVisible);
+  const successRate = useCounterAnimation(97, 2000, isVisible);
   const improvement = useCounterAnimation(42, 2000, isVisible);
   const satisfaction = useCounterAnimation(97, 2000, isVisible);
 

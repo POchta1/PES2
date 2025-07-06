@@ -12,28 +12,11 @@ export default function AboutSection() {
         
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-              <img 
-                src="https://images.unsplash.com/photo-1494790108755-2616c0763008?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=600" 
-                alt="Анна Петрова - репетитор по математике"
-                className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
-            </div>
-            
-            {/* Floating stats */}
-            <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">95%</div>
-                <div className="text-sm text-gray-600">сдают на 80+</div>
-              </div>
-            </div>
-            <div className="absolute -top-6 -left-6 bg-yellow-400 p-4 rounded-xl shadow-lg">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">9</div>
-                <div className="text-sm text-primary">лет опыта</div>
-              </div>
-            </div>
+            <img 
+              src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=600" 
+              alt="Анна Петрова - репетитор по математике"
+              className="w-full h-96 object-cover rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
+            />
           </div>
           
           <div className="space-y-6">

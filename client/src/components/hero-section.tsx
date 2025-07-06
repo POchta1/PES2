@@ -13,12 +13,23 @@ export default function HeroSection({ onBookingClick }: HeroSectionProps) {
     setIsVisible(true);
   }, []);
 
-  const successRate = useCounterAnimation(95, 2000, isVisible);
-  const experience = useCounterAnimation(8, 2000, isVisible);
-  const students = useCounterAnimation(150, 2000, isVisible);
+  const successRate = useCounterAnimation(94, 2000, isVisible);
+  const experience = useCounterAnimation(7, 2000, isVisible);
+  const students = useCounterAnimation(280, 2000, isVisible);
 
   return (
     <section id="hero" className="hero-gradient min-h-screen flex items-center relative overflow-hidden">
+      {/* Mathematical formulas background */}
+      <div className="math-bg">
+        <div className="math-formula">√(x² + y²)</div>
+        <div className="math-formula">∫f(x)dx</div>
+        <div className="math-formula">lim(x→∞)</div>
+        <div className="math-formula">sin²x + cos²x = 1</div>
+        <div className="math-formula">ax² + bx + c = 0</div>
+        <div className="math-formula">π ≈ 3.14159</div>
+        <div className="math-formula">e^(iπ) + 1 = 0</div>
+        <div className="math-formula">∑(n=1 to ∞)</div>
+      </div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className="lg:w-1/2 text-white text-center lg:text-left">
@@ -66,7 +77,7 @@ export default function HeroSection({ onBookingClick }: HeroSectionProps) {
           <div className="lg:w-1/2 flex justify-center relative">
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=600" 
+                src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&h=600" 
                 alt="Анна Петрова - репетитор по математике" 
                 className="rounded-2xl shadow-2xl w-80 h-96 lg:w-96 lg:h-[500px] object-cover border-4 border-white transform hover:scale-105 transition-transform duration-300"
               />

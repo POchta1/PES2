@@ -114,10 +114,17 @@ This is a modern, professional tutoring website built for private mathematics tu
 ```
 Changelog:
 - June 27, 2025. Initial setup
+- June 27, 2025. Migration completed and enhanced with:
+  - Mathematical formulas background animations
+  - Updated statistics (94% success rate, 280+ students, 7 years experience)
+  - Professional photos for testimonials and tutor section
+  - Enhanced visual design with floating mathematical expressions
 ```
 
 ## User Preferences
 
 ```
 Preferred communication style: Simple, everyday language.
+Language: Russian
+Design preferences: Mathematical formulas background, professional photos for testimonials
 ```

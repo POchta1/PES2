@@ -6,26 +6,29 @@ export default function ResultsSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
 
-  const avgScore = useCounterAnimation(78, 2000, isVisible);
-  const successRate = useCounterAnimation(92, 2000, isVisible);
-  const improvement = useCounterAnimation(35, 2000, isVisible);
-  const satisfaction = useCounterAnimation(98, 2000, isVisible);
+  const avgScore = useCounterAnimation(82, 2000, isVisible);
+  const successRate = useCounterAnimation(94, 2000, isVisible);
+  const improvement = useCounterAnimation(42, 2000, isVisible);
+  const satisfaction = useCounterAnimation(97, 2000, isVisible);
 
   const testimonials = [
     {
       name: "Елена Смирнова",
       role: "Мама ученика",
-      text: "Анна Александровна — настоящий профессионал! Мой сын повысил балл с 45 до 78 за полгода подготовки. Занятия проходили интересно, сын с удовольствием делал домашние задания."
+      text: "Анна Александровна — настоящий профессионал! Мой сын повысил балл с 45 до 78 за полгода подготовки. Занятия проходили интересно, сын с удовольствием делал домашние задания.",
+      image: "https://images.unsplash.com/photo-1494790108755-2616c0763008?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&h=150"
     },
     {
       name: "Михаил Петров",
       role: "Ученик 11 класса",
-      text: "Благодаря занятиям с Анной Александровной сдал ЕГЭ на 85 баллов и поступил в МГУ! Объясняет очень понятно, всегда поддерживает и верит в успех."
+      text: "Благодаря занятиям с Анной Александровной сдал ЕГЭ на 85 баллов и поступил в МГУ! Объясняет очень понятно, всегда поддерживает и верит в успех.",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&h=150"
     },
     {
       name: "Анастасия Иванова",
       role: "Выпускница",
-      text: "Математика была моим слабым местом, но после года занятий сдала ЕГЭ на 82 балла! Анна Александровна умеет найти подход и объяснить самые сложные темы простым языком."
+      text: "Математика была моим слабым местом, но после года занятий сдала ЕГЭ на 82 балла! Анна Александровна умеет найти подход и объяснить самые сложные темы простым языком.",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&h=150"
     }
   ];
 
@@ -109,8 +112,12 @@ export default function ResultsSection() {
                 <div key={index} className="w-full flex-shrink-0 px-4">
                   <div className="testimonial-card text-gray-800 max-w-2xl mx-auto">
                     <div className="flex items-center mb-6">
-                      <div className="w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center mr-4 text-white text-2xl">
-                        <i className="fas fa-user"></i>
+                      <div className="w-16 h-16 mr-4">
+                        <img 
+                          src={testimonial.image} 
+                          alt={testimonial.name}
+                          className="w-16 h-16 rounded-full object-cover border-2 border-primary shadow-lg"
+                        />
                       </div>
                       <div>
                         <h4 className="font-bold text-lg">{testimonial.name}</h4>

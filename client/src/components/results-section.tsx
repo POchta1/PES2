@@ -8,8 +8,8 @@ export default function ResultsSection() {
 
   const avgScore = useCounterAnimation(86, 2000, isVisible);
   const successRate = useCounterAnimation(97, 2000, isVisible);
-  const improvement = useCounterAnimation(42, 2000, isVisible);
-  const satisfaction = useCounterAnimation(97, 2000, isVisible);
+  const improvement = useCounterAnimation(33, 2000, isVisible);
+  const satisfaction = useCounterAnimation(100, 2000, isVisible);
 
   const testimonials = [
     {

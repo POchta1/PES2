@@ -14,9 +14,12 @@ export default function AboutSection() {
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400" 
+                src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600" 
                 alt="Анна Петрова - репетитор по математике" 
                 className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-300"
+                loading="eager"
+                crossOrigin="anonymous"
+                style={{ backgroundColor: '#f3f4f6' }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
             </div>

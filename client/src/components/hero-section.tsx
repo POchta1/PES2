@@ -10,6 +10,7 @@ export default function HeroSection({ onBookingClick }: HeroSectionProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    // Start animation immediately since hero is visible on page load
     setIsVisible(true);
   }, []);
 
